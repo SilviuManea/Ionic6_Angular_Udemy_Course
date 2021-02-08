@@ -3,6 +3,7 @@
   <app-post
     *ngFor="let mensaje of mensajes | async"
     [mensaje]="mensaje"
+    (clickPost)="escuchaClick($event)"
   ></app-post>
 
   <!-- <li *ngFor="let mensaje of mensajes | async" class="list-group-item">
