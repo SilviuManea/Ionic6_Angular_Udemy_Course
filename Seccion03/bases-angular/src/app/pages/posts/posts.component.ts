@@ -20,6 +20,7 @@ export class PostsComponent implements OnInit {
     // });
   }
 
+  // tslint:disable-next-line: typedef
   escuchaClick(id) {
     console.log('Click en:', id);
   }
