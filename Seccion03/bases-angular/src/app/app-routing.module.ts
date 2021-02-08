@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'posts',
-    //loadChildren './pages/posts/posts.module#PostsModule',
+    // loadChildren './pages/posts/posts.module#PostsModule',
     loadChildren: () =>
       import('./pages/posts/posts.module').then((m) => m.PostsModule),
   },
