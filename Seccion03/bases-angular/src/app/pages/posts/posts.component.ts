@@ -7,11 +7,16 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
+  mensajes: any;
+
   constructor(private dataservice: DataService) {}
 
   ngOnInit(): void {
-    this.dataservice.getPosts().subscribe((posts) => {
-      console.log(posts);
-    });
+    this.mensajes = this.dataservice.getPosts();
+
+    // this.dataservice.getPosts().subscribe((posts: any[]) => {
+    //   console.log(posts);
+    //   this.mensajes = posts;
+    // });
   }
 }
