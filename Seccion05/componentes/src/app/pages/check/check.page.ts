@@ -6,10 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./check.page.scss'],
 })
 export class CheckPage implements OnInit {
+  data = [
+    {
+      name: 'primary',
+      selected: false,
+    },
+    {
+      name: 'secondary',
+      selected: true,
+    },
+    {
+      name: 'tertiary',
+      selected: false,
+    },
+    {
+      name: 'success',
+      selected: true,
+    },
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onClick(item: any) {
+    console.log(item);
   }
 
+  verData() {
+    console.log(this.data);
+  }
 }
