@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ButtonPage } from './button.page';
+import { CardPage } from './card.page';
 
-describe('ButtonPage', () => {
-  let component: ButtonPage;
-  let fixture: ComponentFixture<ButtonPage>;
+describe('CardPage', () => {
+  let component: CardPage;
+  let fixture: ComponentFixture<CardPage>;
 
-  // tslint:disable-next-line: deprecation
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ButtonPage],
-      imports: [IonicModule.forRoot()],
+      declarations: [ CardPage ],
+      imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ButtonPage);
+    fixture = TestBed.createComponent(CardPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
