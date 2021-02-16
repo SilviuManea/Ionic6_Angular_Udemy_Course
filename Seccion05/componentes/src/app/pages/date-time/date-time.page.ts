@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./date-time.page.scss'],
 })
 export class DateTimePage implements OnInit {
+  fechaNaci: Date = new Date();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  cambioFecha(event) {
+    console.log(event);
+    console.log(new Date(event.detail.value));
   }
-
 }
