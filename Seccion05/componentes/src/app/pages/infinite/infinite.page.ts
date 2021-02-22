@@ -16,7 +16,7 @@ export class InfinitePage implements OnInit {
   ngOnInit() {}
 
   loadData(event) {
-    //console.log(event);
+    // console.log(event);
 
     setTimeout(() => {
       if (this.data.length > 50) {
@@ -28,7 +28,7 @@ export class InfinitePage implements OnInit {
       const nuevoArr = Array(20);
       this.data.push(...nuevoArr);
 
-      //event.target.complete();
+      // event.target.complete();
       this.infiniteScroll.complete();
     }, 1500);
   }
