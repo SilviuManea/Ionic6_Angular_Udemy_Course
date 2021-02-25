@@ -5,15 +5,25 @@
     </ion-buttons>
 
     <ion-title color="primary">List-Reorder</ion-title>
+
+    <!-- Botton -->
+    <ion-button slot="end" (click)="reorderDisabled = !reorderDisabled">
+      Toggle
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-reorder-group disabled="false" (ionItemReorder)="doReorder($event)">
+    <ion-reorder-group
+      [disabled]="reorderDisabled"
+      (ionItemReorder)="doReorder($event)"
+    >
       <ion-item *ngFor="let personaje of personajes">
         <ion-label>{{ personaje }}</ion-label>
-        <ion-reorder slot="end"></ion-reorder>
+        <ion-reorder slot="end">
+          <ion-icon name="pizza"></ion-icon>
+        </ion-reorder>
       </ion-item>
     </ion-reorder-group>
   </ion-list>

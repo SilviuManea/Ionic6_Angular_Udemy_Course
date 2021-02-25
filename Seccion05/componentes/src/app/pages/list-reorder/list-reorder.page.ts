@@ -14,6 +14,9 @@ export class ListReorderPage implements OnInit {
     'Flash',
   ];
 
+  // Crear propiedad booleana
+  reorderDisabled: boolean = true;
+
   constructor() {}
 
   ngOnInit() {}
@@ -21,6 +24,7 @@ export class ListReorderPage implements OnInit {
   doReorder(event: any) {
     console.log(event);
 
+    // tslint:disable-next-line: max-line-length
     const itemMover = this.personajes.splice(event.detail.from, 1)[0]; //cortamos el elemento de la posicion que nos indica el evento, y lo guardamos en un array y cogemos la posicion 0.
     this.personajes.splice(event.detail.to, 0, itemMover); //insertamos el elemento en la posición (event.detail.to) , del array itemMover
 
